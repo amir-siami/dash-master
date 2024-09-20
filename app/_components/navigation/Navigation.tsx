@@ -1,6 +1,8 @@
 "use client";
 
 import { checkPermission } from "@/app/_helpers/permissions";
+import { useRouter } from "next/navigation";
+
 import NavLink from "./links/NavLink";
 
 const Navigation: React.FC<{ userRole: string }> = ({ userRole }) => {
@@ -9,7 +11,7 @@ const Navigation: React.FC<{ userRole: string }> = ({ userRole }) => {
     {
       name: "Dashboard",
       href: "/dashboard",
-      visible: checkPermission(userRole, "Dashboard"),
+      visible: true,
     },
     {
       name: "Settings",
@@ -18,13 +20,15 @@ const Navigation: React.FC<{ userRole: string }> = ({ userRole }) => {
     },
   ];
 
+  const router = useRouter();
+
   const handleNavigation = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
     link: { name: string; href: string; visible: boolean }
   ) => {
     if (!link.visible) {
       event.preventDefault(); // Prevent navigation
-      alert("Access Denied: You do not have permission to view this page.");
+      router.push("/access-denied"); // Redirect to an access denied page
     }
   };
 

@@ -6,7 +6,7 @@ const Page = () => {
           Welcome to Dashboard Master.
         </h1>
         <a
-          href="/blog"
+          href="/dashboard/blog"
           className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
         >
           Explore our blogs

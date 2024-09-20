@@ -1,4 +1,3 @@
-// Define the User type and export it
 export interface User {
   username: string;
   role: "Viewer" | "Admin"; // Define allowed roles as a union of string literals
