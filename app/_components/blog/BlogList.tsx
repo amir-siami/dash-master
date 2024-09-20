@@ -1,11 +1,11 @@
 "use client";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { getData } from "@/app/_utils/api/getPosts";
 
 import Spinner from "@/app/_components/spinner/Spinner";
 import BlogCard from "./BlogCard";
-import { useState } from "react";
 
 export default function BlogList() {
   const [page, setPage] = useState(1);
