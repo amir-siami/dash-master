@@ -1,4 +1,4 @@
-import Blog from "@/app/_components/blog/Blog";
+import BlogList from "@/app/_components/blog/BlogList";
 
 import type { Metadata } from "next";
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div>
-      <Blog />
+      <BlogList />
     </div>
   );
 };
