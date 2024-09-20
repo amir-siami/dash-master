@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 
 import { Josefin_Sans } from "next/font/google";
 
+import Header from "./_components/header/Header";
+import getUserRole from "./_utils/api/getUserRole";
+
+import "@/app/_styles/globals.css";
+
 const josefin = Josefin_Sans({
   subsets: ["latin"],
   display: "swap",
 });
-
-import "@/app/_styles/globals.css";
-import Header from "./_components/header/Header";
-import getUserRole from "./_utils/api/getUserRole";
 
 export const metadata: Metadata = {
   title: {
