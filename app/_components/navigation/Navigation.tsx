@@ -1,18 +1,18 @@
-"use client";
-import React from "react";
-import Links, { LinkItem } from "./links/Links";
+import NavLink from "./links/NavLink";
 
-const links: LinkItem[] = [
-  { title: "Home", path: "/" },
-  { title: "List", path: "/list" },
-  { title: "Settings", path: "/settings" },
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Dashboard", href: "/dashboard" },
+  { name: "Settings", href: "/settings" },
 ];
 
 const Navigation: React.FC = () => {
   return (
-    <nav>
-      <ul>
-        <Links links={links} />
+    <nav className="z-10 text-xl">
+      <ul className="flex gap-16 items-center">
+        {navLinks.map((link) => (
+          <NavLink key={link.name} name={link.name} href={link.href} />
+        ))}
       </ul>
     </nav>
   );

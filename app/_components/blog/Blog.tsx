@@ -2,18 +2,17 @@
 import { useQuery } from "@tanstack/react-query";
 // import Card from "./components/Card/Card";
 import getPosts from "@/app/_utils/api/getPosts";
-// import Loading from "./components/Loading/Loading";
+import Spinner from "@/app/_components/spinner/Spinner";
 
-export default function List() {
+export default function Blog() {
   const { data, isLoading, isError } = useQuery({
     queryFn: async () => await getPosts(),
-    queryKey: [], //Array according to Documentation
+    queryKey: ["posts"], //Array according to Documentation
   });
 
   console.log("Received data", data);
 
-  //   if (isLoading) return <Loading />;
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Spinner />;
   if (isError) return <div>Sorry There was an Error</div>;
 
   return (
