@@ -1,11 +1,16 @@
 import { FC } from "react";
+import List from "@/app/_components/list/List";
 
 interface ListProps {
   list: [];
 }
 
-const List: FC<ListProps> = () => {
-  return <div>List</div>;
+const ListPage: FC<ListProps> = () => {
+  return (
+    <div>
+      <List />
+    </div>
+  );
 };
 
-export default List;
+export default ListPage;
