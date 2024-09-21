@@ -12,10 +12,13 @@ export async function getData(page: number, limit: number) {
       options
     );
 
-    if (!response.ok) throw new Error("Failed to fetch posts");
-
+    // Check if the response is okay
+    if (!response.ok) {
+      throw new Error(`Failed to fetch posts: ${response.statusText}`);
+    }
     return response.json();
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }

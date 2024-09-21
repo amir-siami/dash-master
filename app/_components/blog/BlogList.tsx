@@ -16,8 +16,6 @@ export default function BlogList() {
     queryKey: ["blogs", page],
   });
 
-  console.log("Received data", data);
-
   if (isLoading) return <Spinner />;
   if (isError) return <div>Sorry There was an Error</div>;
 
