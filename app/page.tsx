@@ -16,11 +16,15 @@ const HomePage = () => {
           Welcome to My Blog!
         </h1>
         <p className="text-xl text-primary-900 tracking-wide mb-10 font-normal w-[40rem] mx-auto">
-          Discover insights, tips, and stories about [your interests]. Whether
-          you&apos;re here to learn, get inspired, or just explore new ideas,
-          you&apos;re in the right place. Dive into the latest posts, explore
-          categories that pique your curiosity, and feel free to leave a comment
-          or connect with me.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempore
+          suscipit rem nam architecto magni fuga ex accusantium id, aliquam ab
+          rerum impedit. Sapiente doloremque ratione culpa reprehenderit tenetur
+          repudiandae maxime quam veniam ducimus at, fuga similique, obcaecati
+          laboriosam nihil, ad dolorum! Suscipit laborum non ad reiciendis
+          ipsum, maxime voluptatem minima error minus fugit deleniti nisi,
+          dolorum pariatur amet hic? Eum reprehenderit, qui cumque, saepe
+          dignissimos nam possimus illum fugiat fuga voluptate eos id maiores ex
+          deserunt inventore amet adipisci!
         </p>
         <a
           href="/dashboard"
