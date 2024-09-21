@@ -36,7 +36,7 @@ const Navigation: React.FC<{ userRole: string }> = ({ userRole }) => {
         </button>
       </div>
       <ul
-        className={`flex md:flex-row gap-16 items-center ${
+        className={`flex md:flex-row md:gap-16 gap-4 items-center ${
           isMobileMenuOpen ? "flex" : "hidden md:flex"
         }`}
       >
