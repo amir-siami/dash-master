@@ -1,5 +1,3 @@
-// getData.test.ts
-
 import { getData } from "./getPosts";
 
 // Mock the fetch function
