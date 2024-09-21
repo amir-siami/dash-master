@@ -1,6 +1,6 @@
 const rolePermissions: Record<string, string[]> = {
-  viewer: ["blog"],
-  admin: ["Dashboard", "settings"],
+  viewer: ["home", "dashboard", "blogs"],
+  admin: [],
 };
 
 export const checkPermission = (role: string, page: string): boolean => {
